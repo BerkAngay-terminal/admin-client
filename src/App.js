@@ -1,9 +1,9 @@
 import './App.css';
-import SideBar from './components/SideBar/SideBar';
+import MainLayout from './layout/MainLayout/MainLayout';
 
 function App() {
   return (
-    <SideBar/>
+    <MainLayout/>
   );
 }
 
