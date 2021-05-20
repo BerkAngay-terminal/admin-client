@@ -11,6 +11,7 @@ import {
 } from '@heroicons/react/outline'
 import DarkModeToggle from '../DarkModeToggle/DarkModeToggle';
 import CompanyLogo from '../CompanyLogo/CompanyLogo';
+import Logo from '../../assets/Logo.png';
 
 
 const navigation = [
@@ -27,9 +28,9 @@ function classNames(...classes) {
 }
 
 export default function SideBar(props) {
-  
+
   let [sidebarOpen, setSidebarOpen] = useState(false)
-  
+
 
   // !! TODO !!
   // Get button pressed info on  MainLayout and use it on Transition.Root show={}
@@ -86,8 +87,8 @@ export default function SideBar(props) {
               </Transition.Child>
               <div className="flex-shrink-0 px-4 flex items-center">
                 <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
+                  className="h-6 w-auto"
+                  src={Logo}
                   alt="Workflow"
                 />
               </div>
@@ -156,8 +157,8 @@ export default function SideBar(props) {
           </div>
           {/* Navigation Items */}
 
-          <div className="flex-shrink-0 flex border-t border-gray-200 p-4">
-              <DarkModeToggle/>
+          <div className="flex-shrink-0 flex border-t border-gray-200 p-4 bg-white">
+            <DarkModeToggle />
           </div>
 
         </div>
@@ -165,5 +166,5 @@ export default function SideBar(props) {
       </div>
     </div>
   )
- 
+
 }
