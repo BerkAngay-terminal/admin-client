@@ -4,6 +4,7 @@ import ProfileIcon from '../../components/ProfileIcon/ProfileIcon';
 import Notification from '../../components/Notification/Notification';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import SideBar from '../../components/SideBar/SideBar';
+import Orders from '../../components/Orders/Orders';
 
 export default function MainLayout() {
     const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -12,7 +13,7 @@ export default function MainLayout() {
     // Crete navigation array with navigation pages & their names. 
 
     return (
-        <div className="h-screen bg-white overflow-hidden flex">
+        <div className="h-screen overflow-hidden flex bg-gray-50">
 
             {/* SIDEBAR AREA */}
                 {/* Maybe I can send some navigation properties */}
@@ -22,7 +23,7 @@ export default function MainLayout() {
             <div className="flex-1 max-w-4xl mx-auto w-0 flex flex-col md:px-8 xl:px-0">
 
                 {/*HEADER AREA*/}
-                <div className="relative z-10 flex-shrink-0 h-16 bg-white border-b border-gray-200 flex">
+                <div className="relative z-10 flex-shrink-0 h-16 bg-white border-b border-gray-200 flex ">
 
                     {/* Create component with button */}
                     <button
@@ -52,16 +53,16 @@ export default function MainLayout() {
                 {/*HEADER AREA*/}
 
                 {/* CONTENT AREA */}
-                <main className="flex-1 relative overflow-y-auto focus:outline-none">
+                <main className="flex-1 relative overflow-y-auto focus:outline-none scrollbar-hide">
                     <div className="py-6">
                         <div className="px-4 sm:px-6 md:px-0">
-                            <h1 className="text-2xl font-semibold text-gray-900">Raporlar</h1>
+                            <h1 className="text-2xl font-semibold text-gray-700">Raporlar</h1>
                         </div>
                         <div className="px-4 sm:px-6 md:px-0">
 
                             {/* REPLACE WITH NEW CONTENT */}
                             <div className="py-4">
-                                <div className="h-96 border-4 border-dashed border-gray-200 rounded-lg" />
+                                <Orders/>
                             </div>
                             {/* REPLACE WITH NEW CONTENT */}
 
